@@ -6,6 +6,130 @@
     <title>Food Recommendations</title>
 </head>
 <body>
-    
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Health Nutrition Planner</title>
+    <link rel="stylesheet" href="css/css-recs.css" />
+    <script src="scripts/script-recs.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>Daily Health Nutrition Planner</h1>
+            <p>
+                Build healthier eating habits with personalized nutrition goals,
+                ingredient suggestions, and recipe ideas.
+            </p>
+        </header>
+
+        <main class="main-grid">
+            <!-- Left: User Input -->
+            <section class="card form-card">
+                <h2>Your Health Profile</h2>
+                <form id="health-form">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="Enter your age" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" placeholder="Enter your height" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="Enter your weight" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goal">Health Goal</label>
+                        <select id="goal">
+                            <option value="">Select your goal</option>
+                            <option value="lose">Lose Weight</option>
+                            <option value="maintain">Maintain Weight</option>
+                            <option value="gain">Gain Muscle</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="condition">Health Condition</label>
+                        <select id="condition">
+                            <option value="">Select if applicable</option>
+                            <option value="none">None</option>
+                            <option value="diabetes">Diabetes</option>
+                            <option value="underweight">Underweight</option>
+                            <option value="overweight">Overweight</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="diet">Diet Preference</label>
+                        <select id="diet">
+                            <option value="">Select a preference</option>
+                            <option value="balanced">Balanced</option>
+                            <option value="high-protein">High Protein</option>
+                            <option value="low-carb">Low Carb</option>
+                            <option value="chinese">Chinese Style</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn">Get My Plan</button>
+                </form>
+            </section>
+
+            <!-- Right: Results -->
+            <section class="results-column">
+                <div class="card">
+                    <h2>Daily Nutrition Target</h2>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-box">
+                            <h3>Calories</h3>
+                            <p id="calories-value">2000 kcal</p>
+                        </div>
+                        <div class="nutrition-box">
+                            <h3>Protein</h3>
+                            <p id="protein-value">100 g</p>
+                        </div>
+                        <div class="nutrition-box">
+                            <h3>Carbs</h3>
+                            <p id="carbs-value">250 g</p>
+                        </div>
+                        <div class="nutrition-box">
+                            <h3>Fat</h3>
+                            <p id="fat-value">60 g</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Recommended Ingredients</h2>
+                    <div class="tag-list" id="ingredients-list">
+                        <span class="tag">Chicken Breast</span>
+                        <span class="tag">Brown Rice</span>
+                        <span class="tag">Broccoli</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Recommended Recipes</h2>
+                    <div class="recipe-list" id="recipe-list">
+                        <article class="recipe-card">
+                            <h3>Grilled Chicken with Vegetables</h3>
+                            <p>High protein, low oil, perfect for a balanced lunch.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
 </body>
 </html>
