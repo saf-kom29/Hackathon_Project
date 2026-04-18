@@ -1,0 +1,179 @@
+
+
+/* NAVIGATION */
+nav {
+    background-color: #7c3aed;
+}
+
+.navbar-brand {
+    color: #f3e8ff !important;
+}
+
+.nav-link {
+    color: #f3e8ff !important;
+}
+
+.nav-link:hover {
+    color: #e9d5ff !important;
+}
+
+/* INTRO TO THE INDEX */
+.introduction {
+    margin: 30 auto;
+    padding: 50px;
+    height: 300px;
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+}
+
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo {
+    font-weight: 800;
+    animation: slideInLogo 0.8s ease-out forwards;
+    margin: 0;
+    font-size: 50px;
+    color: #7c3aed;
+}
+
+.logo-underline {
+    height: 4px;
+    background: linear-gradient(to right, #7c3aed, #a855f7);
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 0;
+    opacity: 0;
+    animation: expandUnderline 0.8s ease-out 0.4s forwards;
+    max-width: 300px;
+    transform-origin: left;
+}
+
+/* ANIMATIONS */
+
+@keyframes slideInLogo {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes expandUnderline {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.intro-text {
+    animation: slideInText 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+@keyframes slideInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CARDS */
+.card {
+    transition: 0.3s ease;
+    border: none;
+    border-top: 4px solid #7c3aed;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(124, 58, 237, 0.2) !important;
+}
+
+.btn-primary {
+    background-color: #7c3aed !important;
+    border-color: #7c3aed !important;
+}
+
+.btn-primary:hover {
+    background-color: #6d28d9 !important;
+    border-color: #6d28d9 !important;
+}
+
+/* ABOUT US PART */
+
+/* General section styling */
+#about-us {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f6ff; /* soft light purple background */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Bubbly "Hello there" */
+#about-us h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #a855f7; /* main purple */
+    
+    /* Gradient text */
+    background: linear-gradient(45deg, #c084fc, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Bubble effect with layered shadows */
+    text-shadow:
+        2px 2px 0px #6b21a8,
+        4px 4px 0px #581c87,
+        6px 6px 10px rgba(0, 0, 0, 0.2);
+
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Optional: add a hover "pop" animation */
+#about-us h1:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* Container styling */
+#about-us .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    
+    background: white;
+    border-radius: 15px;
+
+    /* Soft professional shadow */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    /* Subtle border accent */
+    border-left: 6px solid #a855f7;
+
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Paragraph spacing */
+#about-us p {
+    margin-top: 10px;
+}
