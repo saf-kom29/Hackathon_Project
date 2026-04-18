@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physical Health Diagnosis</title>
+    <title>Diagnosis Helper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ohiorizz.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     
+
+
+
+    <div class="diagnosis-container">
+        <h1>Diagnosis Helper</h1>
+        <p class="subtitle">Type your symptoms to narrow down your affliction!</p>
+
+        <div class="search-box">
+            <input type="text" name="" id="diagnosis-input" placeholder="Enter a symptom...">
+            <button id="search-btn" class="btn">Search 🔍</button>
+        </div>
+
+        <p id="error-msg" class="error hidden"></p>
+
+        <div id="results" class="results-grid"></div>
+    </div>
 </body>
+
 </html>

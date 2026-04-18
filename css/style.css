@@ -1,30 +1,51 @@
 
 
+:root {
+    --purple-main: #7c3aed;
+    --purple-dark: #5b21b6;
+    --purple-light: #a855f7;
+    --purple-soft: #f3e8ff;
+    --purple-bg: #faf5ff;
+}
+
 /* NAVIGATION */
 nav {
-    background-color: #7c3aed;
+    background: linear-gradient(90deg, var(--purple-dark), var(--purple-main));
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
 }
 
 .navbar-brand {
-    color: #f3e8ff !important;
+    color: white !important;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .nav-link {
     color: #f3e8ff !important;
+    position: relative;
 }
 
-.nav-link:hover {
-    color: #e9d5ff !important;
+/* Animated underline on hover */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #e9d5ff;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 /* INTRO TO THE INDEX */
 .introduction {
-    margin: 30 auto;
-    padding: 50px;
-    height: 300px;
-    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--purple-bg), var(--purple-soft));
 }
-
 
 .logo-container {
     position: relative;
@@ -40,18 +61,29 @@ nav {
     margin: 0;
     font-size: 50px;
     color: #7c3aed;
+    color: var(--purple-main);
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.logo img {
+    max-width: 500px;
+    max-height: 500px;
+    transition: 0.2s ease-in-out
 }
 
 .logo-underline {
     height: 4px;
     background: linear-gradient(to right, #7c3aed, #a855f7);
     margin: 0 auto;
-    margin-top: 5px;
     width: 0;
     opacity: 0;
     animation: expandUnderline 0.8s ease-out 0.4s forwards;
     max-width: 300px;
     transform-origin: left;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 /* ANIMATIONS */
@@ -106,6 +138,10 @@ nav {
     box-shadow: 0 8px 16px rgba(124, 58, 237, 0.2) !important;
 }
 
+.card-top {
+    background:#a855f7;
+}
+
 .btn-primary {
     background-color: #7c3aed !important;
     border-color: #7c3aed !important;
@@ -128,29 +164,29 @@ nav {
 
 /* Bubbly "Hello there" */
 #about-us h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 800;
-    color: #a855f7; /* main purple */
-    
-    /* Gradient text */
-    background: linear-gradient(45deg, #c084fc, #9333ea);
+
+    background: linear-gradient(45deg, #d8b4fe, #9333ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    /* Bubble effect with layered shadows */
-    text-shadow:
-        2px 2px 0px #6b21a8,
-        4px 4px 0px #581c87,
-        6px 6px 10px rgba(0, 0, 0, 0.2);
+    /* OUTLINE + bubble depth */
+    -webkit-text-stroke: 2px #6b21a8;
 
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    text-shadow:
+        0 4px 0 #6b21a8,
+        0 8px 0 #5b21b6,
+        0 12px 20px rgba(124, 58, 237, 0.4);
+
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+
+    transition: transform 0.2s ease;
 }
 
-/* Optional: add a hover "pop" animation */
 #about-us h1:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease;
+    transform: scale(1.08) rotate(-1deg);
 }
 
 /* Container styling */
